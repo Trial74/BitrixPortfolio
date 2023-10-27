@@ -1,0 +1,66 @@
+.slider.sl_m, .block-sity-active{
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    border: 1px solid #9788ff;
+    border-radius: 7px;
+    background: #f1eeff;
+    padding: 5px;
+}
+.partner_box{
+    display: inline-block;
+    padding: 0 10px 0 10px;
+}
+.country-name{
+    height: 20px;
+    width: 140px;
+    transform: translate(0, 118%);
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+.link-p-b{
+    text-decoration: none !important;
+    color: black !important;
+}
+.block-sity-active{
+    cursor: auto;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+.block-sity-active::before, .block-sity-active::after{
+    content: '';
+    border: 20px solid transparent;
+    border-top: 20px solid #9788ff;
+    position: absolute;
+    top: 133px;
+    left: 36px;
+}
+.block-sity-active::after{
+    border-top: 20px solid #f1eeff;
+    top: 132px;
+}
+.part_breadcrumb{
+    display: block;
+}
+.breadcrumb-part{
+    background-color: transparent;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    border-radius: 4px;
+}
+.breadcrumb-part > li + li:before{
+    content: '—';
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.breadcrumb-part > li {
+    display: inline-block;
+}
+.breadcrumb-item {
+    font-family: 'Graphik LCG';
+    font-weight: 500;
+}
