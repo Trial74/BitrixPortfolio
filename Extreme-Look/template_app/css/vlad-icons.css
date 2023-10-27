@@ -1,0 +1,48 @@
+i.ex-app-icon{
+    margin: auto;
+}
+i.icon-home:before{
+    content: '';
+    background: url('../images/icons/nicon/icon-home.png');
+    background-size: cover;
+    vertical-align: middle;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+i.icon-menu:before{
+    content: '';
+    background: url('../images/icons/nicon/icon-menu.png');
+    background-size: cover;
+    vertical-align: middle;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+i.icon-shop:before{
+    content: '';
+    background: url('../images/icons/nicon/icon-shop.png');
+    background-size: cover;
+    vertical-align: middle;
+    display: inline-block;
+    width: 57px;
+    height: 50px;
+}
+i.icon-basket:before{
+    content: '';
+    background: url('../images/icons/nicon/icon-basket.png');
+    background-size: cover;
+    vertical-align: middle;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+i.icon-menu-second:before{
+    content: '';
+    background: url('../images/icons/nicon/icon-menu-second.png');
+    background-size: cover;
+    vertical-align: middle;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}

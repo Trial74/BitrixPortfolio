@@ -1,0 +1,173 @@
+html.with-statusbar.device-ios .panel-left .list ul,
+html.with-statusbar.ios:not(.device-ios):not(.device-android) .panel-left .list ul { background: transparent; }
+
+html.with-statusbar.device-ios .panel-left .page .list ul:before,
+html.with-statusbar.device-ios .panel-left .page .links-list a:after,
+html.with-statusbar.ios:not(.device-ios):not(.device-android) .panel-left .page .list ul:before,
+html.with-statusbar.ios:not(.device-ios):not(.device-android) .panel-left .page .links-list a:after { /*background-color: rgba(0, 0, 0, 0.05);*/ }
+
+
+.md .navbar {
+	background: #fff;
+	color: #2b2b2b;
+}
+.md .navbar:after{
+	/*background: none;
+	border-top: 1px solid rgba(0,0,0,.12);*/
+}
+
+.md .messagebar:after, .md .toolbar-bottom-md:after { display: none; }
+
+.md .toolbar-inner { border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+.md .list ul:after { background: none; }
+
+.main-cart-link .icon .badge { background-color: rgba(43,43,43, 0.1); color: #2b2b2b; }
+.md .button.button-active, .md .button.button-fill, .md .button.button-fill-md, .md .button.tab-link-active {
+	background: #7b67fe; color: #fff;
+}
+
+.md .button.button-active.active-state, .md .button.button-fill-md.active-state, .md .button.button-fill.active-state, .md .button.tab-link-active.active-state {
+	background: #7b67fe; color: #fff;/*#2b2b2b;*/ opacity: 0.6;
+}
+
+.md .navbar .title { width: 100%; font-weight: bold; }
+
+.md .button,
+.md .dialog-button,
+.md .item-input-focused .item-floating-label, .md .item-input-focused .item-label,
+.md .card-footer a.link,
+.md .card-header a.link,
+.md a,
+.md .login-screen-content .list-button
+{
+	color: #7b67fe;
+}
+
+.md .subnavbar { background-color: #fff; }
+.md .navbar .button:not(.button-fill):not(.button-fill-md), .md .subnavbar .button:not(.button-fill):not(.button-fill-md), .md .toolbar .button:not(.button-fill):not(.button-fill-md)
+{ color: #000; }
+
+.md .subnavbar .button.button-active,
+.md .subnavbar .button.button-fill,
+.md .subnavbar .button.button-fill-md,
+.md .subnavbar .button.tab-link-active {
+	background: #7b67fe;
+	color: white !important;
+}
+
+.md .subnavbar > .subnavbar-inner > .segmented > a.button{
+	text-transform: none;
+}
+
+.md .input-focused:after, .md .item-input-focused .item-input-wrap:after,
+.md .fab-buttons a, .md .fab>a,
+.md .swiper-pagination-bullet-active,
+.md .toolbar
+{
+	/*background: #fff;*/
+	background: #7b67fe;
+}
+
+.md .button.button-outline { border-color: #7b67fe; }
+.md .button.button-outline.green { border-color: green; color: green; }
+.md .button.button-outline.gray { border-color: gray; color: gray; }
+
+.md .bx-blue .btn.btn-default { background-color: #7b67fe !important; border-color: #7b67fe !important; }
+
+.md .panel-left .page { background: #2b2b2b; color: #fff; }
+.panel-left .page .list ul:before,
+.panel-left .page .links-list a:after { background: rgba(255, 255, 255, 0.2);/*#393838;*/ }
+
+.top_icon_soc {
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+}
+
+.top_icon_soc img {
+		width: 40px;
+		margin: 10px;
+}
+.search_form {
+	display: none;
+}
+
+.search_form input[type=text]{
+	border: 1px solid #bababa;
+	padding: 8px;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.load_search_result {
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	width: 100%;
+	z-index: 1000;
+	background: #fff;
+}
+
+.icon.fas.fa-bell {
+	color: #fff;
+	font-size: 25px;
+}
+
+.ios .icon.fas.fa-bell {
+	color: #007aff;
+}
+
+.search-content{
+	display: none;
+	height: 100%;
+	margin-top: 20px;
+  overflow-y: scroll;
+}
+
+.title.sliding.no_search{
+	padding-left: 56px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.detail_propduct .markerContainer,
+.list-type-list .markerContainer,
+.flex-container-items .markerContainer {
+    position: absolute;
+    z-index: 88;
+    left: 10px;
+    top: 10px;
+	display: inline-grid;
+}
+
+.detail_propduct .marker,
+.list-type-list .marker,
+.flex-container-items .marker {
+    font: normal normal 12px "roboto_ltregular" , arial , sans-serif;
+    margin-bottom: 8px;
+    line-height: 16px;
+    padding: 5px 5px;
+    z-index: 2;
+	color: #fff;
+}
+
+.logo_site{
+	background: #fff;
+	border-radius: 10px;
+	margin: 15px;
+}
+.logo_site img {
+	width: 100%;
+}
+
+.ios .navbar-previous {
+	display: none;
+}
