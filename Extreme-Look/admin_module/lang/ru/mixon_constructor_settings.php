@@ -1,0 +1,22 @@
+<?
+$MESS['MIXON_CONSTRUCTOR_CONTROL_TAB_1'] = 'Основные настройки конструктора';
+$MESS['MIXON_CONSTRUCTOR_TABLE_HEAD'] = 'Идентификация разделов';
+$MESS['MIXON_CONSTRUCTOR_HIDE_SECTIONS'] = 'Скрытие разделов из первого этапа';
+$MESS['MIXON_CONSTRUCTOR_HIDE_ITEMS'] = 'Скрытие товаров из первого этапа';
+$MESS['MIXON_CONSTRUCTOR_APPLY_BUTTON'] = 'Сохранить';
+$MESS['MIXON_CONSTRUCTOR_DIZAIN_SECTION'] = 'Раздел с услугами дизайна';
+$MESS['MIXON_CONSTRUCTOR_UPAK_SECTION'] = 'Раздел с услугами упаковки';
+$MESS['MIXON_CONSTRUCTOR_UR_SECTION'] = 'Раздел с юридическими услугами';
+$MESS['MIXON_CONSTRUCTOR_PROPERTIES_PRODUCT'] = 'Настройки свойств продуктов';
+$MESS['MIXON_CONSTRUCTOR_SETTINGS_CONSTRUCTOR'] = 'Прочие настройки конструктора';
+$MESS['MIXON_CONSTRUCTOR_LOGS'] = 'Включить логи в консоль';
+$MESS['MIXON_CONSTRUCTOR_REDUCTION_TEXT'] = 'Обрезка текста в лэйблах (количество символов после которого обрезка)<br /> В конце подставляется "...")';
+$MESS['MIXON_CONSTRUCTOR_VOLUMES'] = 'Варианты объёма товара (через запятую)';
+$MESS['MIXON_CONSTRUCTOR_NO_SELECT'] = 'Не выбрано';
+$MESS['MIXON_CONSTRUCTOR_ERROR_REQUEST'] = 'Ошибка в данных POST';
+$MESS['MIXON_CONSTRUCTOR_ERROR_PARSE'] = 'Ошибка парсинга параметров';
+$MESS['MIXON_CONSTRUCTOR_MAX_CIRC'] = 'Максимальный тираж';
+$MESS['MIXON_CONSTRUCTOR_SKU_HEAD'] = 'Торговые предложения';
+$MESS['MIXON_CONSTRUCTOR_SKU_PROPS'] = 'Характеристики по которым производится отбор';
+$MESS['MIXON_CONSTRUCTOR_QUANT_SERVICES'] = 'Количество услуги = количеству товара';
+$MESS['MIXON_CONSTRUCTOR_SKU_HIDDEN'] = 'Скрыть характеристики (указать ИД через запятую)';

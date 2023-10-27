@@ -1,0 +1,22 @@
+<?
+$MESS['EXTREME_FILE_MEMORY_TAB_1'] = "Настройки скрипта очистки сайта";
+$MESS['EXTREME_FILE_MEMORY_TAB_2'] = "История очистки";
+$MESS['EXTREME_FILE_MEMORY_LOGS'] = "Логи";
+$MESS['EXTREME_FILE_MEMORY_SETTINGS'] = "Настройки";
+$MESS['EXTREME_FILE_MEMORY_HEAD_1'] = "Настройка каталогов";
+$MESS['EXTREME_FILE_MEMORY_ROOT_DIR'] = "Каталог очистки:";
+$MESS['EXTREME_FILE_MEMORY_BACKUP_DIR'] = "Каталог для бэкапа:";
+$MESS['EXTREME_FILE_MEMORY_LIMIT'] = "Ограничение (количество пройденных каталогов очистки, '0' - без лимита):";
+$MESS['EXTREME_FILE_MEMORY_START'] = "Начать очистку";
+$MESS['EXTREME_FILE_MEMORY_SLEEP'] = "Пропуск каталогов (количество каталогов которые проигнорируются скриптом):";
+$MESS['EXTREME_FILE_MEMORY_HEAD_LOGS'] = "Данные про прошлым очисткам";
+$MESS['EXTREME_FILE_MEMORY_TABLE_HEAD_LOGS_1'] = "Дата запуска";
+$MESS['EXTREME_FILE_MEMORY_TABLE_HEAD_LOGS_2'] = "Общий размер очистки";
+$MESS['EXTREME_FILE_MEMORY_TABLE_HEAD_LOGS_3'] = "Количество пройденных каталогов";
+$MESS['EXTREME_FILE_MEMORY_TABLE_HEAD_LOGS_4'] = "Количество найденных в базе файлов";
+$MESS['EXTREME_FILE_MEMORY_TABLE_HEAD_LOGS_5'] = "Очищенно файлов за запуск";
+$MESS['EXTREME_FILE_MEMORY_TABLE_HEAD_LOGS_6'] = "Время работы скрипта";
+$MESS['EXTREME_FILE_MEMORY_TABLE_HEAD_LOGS_7'] = "Всего найденных файлов";
+$MESS['EXTREME_FILE_MEMORY_COUNT_ROOT_DIR'] = "Подсчитать количество каталогов";
+$MESS['EXTREME_FILE_MEMORY_NUMBER_DIR'] = "<span data-hint='Если на какойто итерации скрипт зависает можно найти каталог в котором проблема (в файловой системе файлы хранятся не по алфавиту поэтому вручную пролистать не получится)'></span>Название каталога по номеру итерации:";
+$MESS['EXTREME_FILE_MEMORY_NUMBER_DIR_BUTTON'] = "Получить название";

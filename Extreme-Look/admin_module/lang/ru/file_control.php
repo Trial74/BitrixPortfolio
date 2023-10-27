@@ -1,0 +1,13 @@
+<?
+$MESS['EXTREME_FILE_CONTROL_TAB_1'] = "Список файлов";
+$MESS['EXTREME_FILE_CONTROL_TABLE_HEAD'] = "Настройки выборки";
+$MESS['EXTREME_FILE_CONTROL_SOURCE'] = "Откуда тащим";
+$MESS['EXTREME_FILE_CONTROL_BASE'] = "База данных";
+$MESS['EXTREME_FILE_CONTROL_FILE_SYSTEM'] = "Файловая система";
+$MESS['EXTREME_FILE_CONTROL_CHOICE_DIR'] = "Выбери каталог";
+$MESS['EXTREME_FILE_CONTROL_BUTTON_START'] = "Старт";
+$MESS['EXTREME_FILE_CONTROL_TABLE_RESULT_1'] = "Размер файла";
+$MESS['EXTREME_FILE_CONTROL_TABLE_RESULT_2'] = "Название файла";
+$MESS['EXTREME_FILE_CONTROL_TABLE_RESULT_3'] = "Адрес файла";
+$MESS['EXTREME_FILE_CONTROL_TABLE_MODULE_IN_BASE'] = "Выберите модуль";
+$MESS['EXTREME_FILE_CONTROL_TABLE_LIMIT_IN_BASE'] = "Лимит выборки (0 - без лимита)";

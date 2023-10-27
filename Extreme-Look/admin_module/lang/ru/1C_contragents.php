@@ -1,0 +1,2 @@
+<?php
+$MESS['EXTREME_1C_CONTRAGENTS_TAB_1'] = "Логи";
