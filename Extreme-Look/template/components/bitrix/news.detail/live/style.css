@@ -1,0 +1,466 @@
+.live-detail-name,
+.live-detail-prev-text,
+.live-count-detail-video,
+.live-products-block,
+.live-count-detail-video-mobile,
+.live-detail-name-mobile,
+.live-prev-container:before,
+.add-comment-tittle,
+.live-comment-user-name,
+.live-comment-date-create,
+.live-comment-text,
+.live-comment-count-like,
+.live-error-likes,
+.live-result-comment,
+.live-comment-like-message,
+.count-comments,
+#live-name-video-player,
+.live-count-detail-video-player{
+    font-family: "Graphik LCG";
+}
+#live-video-popup.popup-window{
+    padding: 0;
+}
+#popup-window-content-live-video-popup{
+    overflow: hidden !important;
+}
+#live-video-popup.popup-window-dark{
+    background-color: transparent;
+}
+#live-video-popup .popup-window-close-icon{
+    width: 40px;
+    height: 40px;
+    right: -30px;
+    top: -30px;
+    background-color: white;
+    border-radius: 20px;
+}
+#live-video-popup.popup-window-dark .popup-window-close-icon:after{
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.787 1L5 3.787 2.213 1 1 2.213 3.787 5 1 7.787 2.213 9 5 6.213 7.787 9 9 7.787 6.213 5 9 2.213' fill='000000' fill-rule='evenodd'/%3E%3C/svg%3E");
+    width: 20px;
+    height: 20px;
+}
+.live-detail-name{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+}
+.live-detail-prev-text{
+    font-size: 18px;
+    font-weight: 400;
+}
+.live-products-block{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.live-news-item-container{
+    color: black !important;
+    height: 560px;
+    border-radius: 20px;
+    background-color: #f9faff;
+    box-shadow: 0 28px 25px 0 rgba(80, 21, 165, 0.14);
+}
+.live-count-detail-video{
+    font-size: 18px;
+    color: #7a66fd;
+}
+.live-count-detail-video-player{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.live-count-detail-video:before,
+.live-count-detail-video-mobile:before,
+.live-count-detail-video-player:before{
+    content: '';
+    background: url("/images/live/eye.png") no-repeat;
+    display: block;
+    float: left;
+    width: 21px;
+    height: 17px;
+    margin-right: 10px;
+}
+.live-count-detail-video-mobile:before,
+.live-count-detail-video-player:before{
+    background: url("/images/live/eye_w.png") no-repeat;
+    width: 28px;
+    height: 22px;
+}
+.count-comments{
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-left: 20px;
+    line-height: 28px;
+}
+.live-prev-container:after{
+    content: '';
+    background: url("/images/live/play.png") no-repeat;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 44px;
+    height: 53px;
+}
+.live-prev-container > img,
+.live-prev-container > div{
+    cursor: pointer;
+}
+.live-likes-detail{
+    background: url("/images/live/heart-white.png") no-repeat;
+    width: 31px;
+    height: 27px;
+}
+.live-likes-detail.live-liked{
+    background: url("/images/live/heart-active.png") no-repeat;
+}
+.live-comment-user-avatar{
+    background: url("/images/live/user-comment.png") no-repeat;
+    width: 50px;
+    height: 50px;
+}
+.live-comment-like{
+    background: url("/images/live/like-comment.png") no-repeat;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+.live-comment-like.liked{
+    background: url("/images/live/like-comment-liked.png") no-repeat;
+}
+.splide__arrow{
+    background: white;
+}
+.splide__arrow svg{
+    fill: #7a66fd;
+}
+.product-item-image-wrapper{
+    height: 180px;
+}
+.live-prev-container:before{
+    content: '● LIVE';
+    padding: 2px 7px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    top: 5%;
+    right: 20%;
+    background-color: #ff3232;
+    border-radius: 10px;
+}
+.live-count-detail-video-mobile{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+.live-detail-name-mobile{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: start;
+    font-weight: 500;
+    color: white;
+}
+.add-comment-tittle{
+    font-size: 30px;
+    font-weight: 600;
+}
+.live-comment-user-name{
+    font-size: 24px;
+    font-weight: 500;
+}
+.live-comment-date-create{
+    color: #7a66fd;
+    font-size: 14px;
+    font-weight: 500;
+}
+.live-comment-text{
+    font-size: 18px;
+    font-weight: 400;
+}
+.live-comment-count-like{
+    font-size: 18px;
+    font-weight: 400;
+}
+.live-result-comment,
+.live-result-comment-like{
+    background: #b4aaf5;
+    color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+.live-result-comment-like{
+    opacity: 0;
+}
+#live-line-progress{
+    position: absolute;
+    bottom: 70px;
+    height: 4px;
+    background: #fff;
+    float: left;
+}
+#live-progress-viewed {
+    position: absolute;
+    background: #7a66fd;
+    height: 4px;
+    bottom: 70px;
+}
+#live-progress-viewed::after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    top: -3px;
+}
+#live-progress-viewed-duration{
+    position: absolute;
+    right: -7px;
+    top: -20px;
+}
+#live-progress-hidden{
+    position: absolute;
+    bottom: 62px;
+    height: 20px;
+    background: transparent;
+    float: left;
+}
+
+#live-line-progress,
+#live-progress-viewed,
+#live-progress-hidden{
+    left: 20px;
+}
+#live-name-video-player{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 500;
+    bottom: 40px;
+    left: 20px;
+    width: 380px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.live-main-block-frame{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#live-video-popup-cover{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+.live-error-likes{
+    background: white;
+    z-index: 4;
+    top: -60px;
+    left: -600px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    text-align: start;
+    opacity: 0;
+}
+.live-comment-like-message{
+    background: white;
+    z-index: 4;
+    top: -60px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    text-align: start;
+    opacity: 0;
+    display: none;
+}
+.live-icon-prev{
+    background-image: url("/images/live/expand.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 58px;
+    height: 58px;
+    left: 70%;
+    bottom: 20px;
+}
+.btn-buy-ok{
+    background: white !important;
+}
+.live_like,
+.live_undo,
+.live_comment{
+    border-radius: 37px;
+    background-image: -moz-linear-gradient( 90deg, rgb(192,146,254) 0%, rgb(225,116,253) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(192,146,254) 0%, rgb(225,116,253) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(192,146,254) 0%, rgb(225,116,253) 100%);
+    box-shadow: 0 20px 40px 0 rgba(80, 21, 165, 0.36);
+    width: min-content;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 0 1px #000;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: transform 300ms;
+    position: relative;
+}
+.live_like:hover,
+.live_undo:hover,
+.live_comment:hover{
+    transform: scale(1.2);
+}
+.live_like:before{
+    content: "";
+    background: url('/images/live/live_heart.png');
+    background-repeat: no-repeat;
+    background-size: 24px 23px;
+    width: 24px;
+    height: 23px;
+    margin-right: 10px;
+}
+.live_undo:before{
+    content: "";
+    position: absolute;
+    background: url('/images/live/live_undo.png');
+    background-repeat: no-repeat;
+    background-size: 24px 23px;
+    width: 24px;
+    height: 23px;
+}
+.live_comment:before{
+    content: "";
+    position: absolute;
+    background: url('/images/live/live_comment.png');
+    background-repeat: no-repeat;
+    background-size: 24px 23px;
+    width: 24px;
+    height: 23px;
+}
+.live_undo,
+.live_comment{
+    width: 50px;
+}
+.cbutton--effect-stana .cbutton__helper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 106px;
+    height: 75px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cbutton--effect-stana line {
+    fill: none;
+    stroke-width: 2;
+}
+.clip-ring {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.cbutton--effect-stana.cbutton--click .cbutton__helper {
+    -webkit-animation: anim-effect-stana 0.4s ease-in forwards;
+    animation: anim-effect-stana 0.4s ease-in forwards;
+}
+
+@-webkit-keyframes anim-effect-stana {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+
+        -webkit-animation-timing: ease-out;
+        animation-timing: ease-out;
+    }
+}
+
+@keyframes anim-effect-stana {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+
+        -webkit-animation-timing: ease-out;
+        animation-timing: ease-out;
+    }
+}
+
+.cbutton--effect-stana.cbutton--click .clip-ring {
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    -webkit-transform: scale3d(3, 3, 1);
+    transform: scale3d(3, 3, 1);
+}
+@media (min-width: 991px){
+    .h-lg-25{
+        height: 25% !important;
+    }
+}
+@media (max-width: 991px){
+    .live-like-share > img{
+        width: 60px;
+    }
+    .live-prev-container:before{
+        right: 10%;
+    }
+    .live-products-block{
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .live-news-item-container{
+        height: unset;
+    }
+    .live-news-item-container{
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    #live-line-progress,
+    #live-progress-viewed,
+    #live-progress-hidden{
+        left: 20px;
+    }
+    #live-progress-hidden{
+        bottom: 42px;
+    }
+    #live-video-popup .popup-window-close-icon{
+        right: 0;
+    }
+}
+@media (max-width: 400px){
+    .add-comment-tittle{
+        font-size: 20px;
+    }
+    .live-count-detail-video-mobile:before{
+        background-size: 21px 16px;
+        width: 21px;
+        height: 16px;
+    }
+    .live-detail-name-mobile{
+        font-size: 21px;
+    }
+    .live-count-detail-video-mobile{
+        font-size: 18px;
+    }
+    .live-likes-detail{
+        background-size: 28px 25px;
+        background-position: center;
+    }
+}

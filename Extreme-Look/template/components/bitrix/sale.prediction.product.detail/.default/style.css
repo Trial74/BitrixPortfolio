@@ -1,0 +1,63 @@
+.simple-prediction-popup-window{
+	width: 288px;
+	padding: 12px 40px 12px 18px;
+	font-family: "Museo Sans Cyrl 300", sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+	z-index: 202 !important;
+}
+
+.simple-prediction-popup-window .catalog-element-popup-element{
+	font-family: "Museo Sans Cyrl 700", sans-serif;
+}
+
+.simple-prediction-popup-window .popup-window-close-icon{
+	width: 16px;
+	height: 16px;
+	right: 12px;
+	top: 12px;
+	opacity: 1;
+}
+
+.simple-prediction-popup-window .popup-window-close-icon:after{
+	content: none;
+}
+
+.simple-prediction-popup-window .popup-window-close-icon > i{
+	font-size: 16px;
+	color: #8ea6ab;
+	-webkit-transition: all 0.15s ease 0s;
+	-moz-transition: all 0.15s ease 0s;
+	-o-transition: all 0.15s ease 0s;
+	transition: all 0.15s ease 0s;
+}
+
+.bx-no-touch .simple-prediction-popup-window .popup-window-close-icon:hover > i,
+.bx-touch .simple-prediction-popup-window .popup-window-close-icon:active > i{
+	color: #6639b6;
+}
+
+.simple-prediction-popup-window .popup-window-angly-top{
+	left: 50% !important;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+/***PHONES***/
+@media(max-width: 991px){
+	.simple-prediction-popup-window{
+		width: auto;
+		left: 18px !important;
+		right: 18px;
+	}
+}
+
+/***DESKTOPS***/
+@media(min-width: 992px) and (max-width: 1271px){
+	.simple-prediction-popup-window{
+		width: 231px;
+	}
+}

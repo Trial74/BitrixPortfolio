@@ -1,0 +1,6 @@
+.bx-yandex-view-layout { position: relative; max-width: 100%; }
+.selectize-dropdown .optgroup-header { font-weight: bold; }
+.selectize-dropdown [data-selectable].option { padding-left: 16px; }
+.selectize-control.multi .selectize-input > div.item,
+.selectize-control.multi .selectize-input > div.item.active
+ { background-color: #ed1c24; color: #fff; border-radius: 3px; }

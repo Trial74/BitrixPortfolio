@@ -1,0 +1,12 @@
+<?
+$MESS["CT_BCI_TPL_MESS_QUICK_VIEW"] = "Быстрый просмотр";
+$MESS["CT_BCI_TPL_MESS_REVIEW"] = "отзыв";
+$MESS["CT_BCI_TPL_MESS_REVIEWS_1"] = "отзыва";
+$MESS["CT_BCI_TPL_MESS_REVIEWS_2"] = "отзывов";
+$MESS["CT_BCI_TPL_MESS_PRICE_FROM"] = "от";
+$MESS["CT_BCI_TPL_MESS_PRICE_NOT_SET"] = "Не указана цена";
+$MESS["CT_BCI_TPL_MESS_PRICE_MEASURE_SQ_M"] = "м&sup2;";
+$MESS["CT_BCI_TPL_MESS_PRICE_ECONOMY"] = "Экономия #ECONOMY#";
+$MESS["CT_BCI_TPL_MESS_MEASURE_PC"] = "шт.";
+$MESS["CT_BCI_TPL_MESS_MEASURE_SQ_M"] = "м&sup2;";
+$MESS["CT_BCI_TPL_MESS_TOTAL_COST"] = "Общая стоимость";

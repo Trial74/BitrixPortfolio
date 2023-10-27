@@ -1,0 +1,12 @@
+.live-tittle{
+    font-family: "Graphik LCG";
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 800;
+}
+@media (max-width: 991px){
+    .live-tittle{
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
