@@ -1,0 +1,853 @@
+/* делаем везде так, чтобы свойства width и height задавали не размеры контента, а размеры блока */
+/** {
+    box-sizing: border-box;
+}
+
+!* общие настройки страницы *!
+body {
+    !* подключаем сетку *!
+    display: grid;
+    !* ставим всё по центру *!
+    place-items: center;
+    !* если что-то не помещается на своё место — скрываем то, что не поместилось *!
+    overflow: hidden;
+}*/
+
+/* общий блок для всех элементов */
+.deal-wheel {
+    /* задаём переменные блока */
+    /* размеры колеса */
+    --size: clamp(250px, 80vmin, 700px);
+    /* настройки яркости и заливки фона секторов */
+    --lg-hs: 0 3%;
+    --lg-stop: 50%;
+    --lg: linear-gradient(
+            hsl(var(--lg-hs) 0%) 0 var(--lg-stop),
+            hsl(var(--lg-hs) 20%) var(--lg-stop) 100%
+    );
+    /* добавляем позиционирование относительно других элементов */
+    position: relative;
+    /* подключаем сетку */
+    display: grid;
+    /*grid-gap: calc(var(--size) / 20);*/
+    /* выравниваем содержимое блока по центру */
+    align-items: center;
+    /* задаём имена областей внутри сетки */
+    grid-template-areas:
+            "spinner"
+            "trigger";
+    /* устанавливаем размер шрифта */
+    font-size: calc(var(--size) / 21);
+}
+
+/* всё, что относится ко внутренним элементам главного блока, будет находиться в области сетки с названием spinner */
+.deal-wheel > * {
+    grid-area: spinner;
+}
+
+/* сам блок и кнопка будут находиться в области сетки с названием trigger и будут выровнены по центру */
+.deal-wheel .btn-spin {
+    grid-area: trigger;
+    justify-self: center;
+}
+
+/* сектор колеса */
+.spinner {
+    /* добавляем относительное позиционирование */
+    position: relative;
+    /* подключаем сетку */
+    display: grid;
+    /* выравниваем всё по центру */
+    align-items: center;
+    /* добавляем элемент в сетку */
+    grid-template-areas: "spinner";
+    /* устанавливаем размеры */
+    width: 500px;/*var(--size);*/
+    height: 500px;/*var(--size);*/
+    /* поворачиваем элемент  */
+    transform: rotate(calc(var(--rotate, 25) * 1deg));
+    /* рисуем круглую обводку, а всё, что не поместится, — будет скрыто за кругом */
+    border-radius: 50%;
+}
+
+/* всё, что внутри этого блока, будет находиться в области сетки с названием spinner */
+.spinner * {
+    grid-area: spinner;
+}
+
+/* текст на секторах */
+.prize {
+    /* включаем «гибкую» вёрстку */
+    display: flex;
+    align-items: center;
+    /* задаём отступы от краёв блока */
+    padding: 0 calc(var(--size) / 6) 0 calc(var(--size) / 20);
+    /* устанавливаем размеры */
+    width: 50%;
+    height: 50%;
+    /* устанавливаем координаты, относительно которых будем вращать текст */
+    transform-origin: center right;
+    /* поворачиваем текст */
+    transform: rotate(var(--rotate));
+    /* запрещаем пользователю выделять мышкой текст на секторах */
+    user-select: none;
+}
+
+/* язычок */
+.ticker {
+    /* добавляем относительное позиционирование */
+    position: relative;
+    /* устанавливаем размеры */
+    left: calc(var(--size) / -15);
+    width: calc(var(--size) / 10);
+    height: calc(var(--size) / 20);
+    /* фон язычка */
+    background: var(--lg);
+    /* делаем так, чтобы язычок был выше колеса */
+    z-index: 1;
+    /* форма язычка */
+    clip-path: polygon(20% 0, 100% 50%, 20% 100%, 0% 50%);
+    /* устанавливаем точку, относительно которой будет вращаться язычок при движении колеса */
+    transform-origin: center left;
+}
+
+/* кнопка запуска колеса */
+.btn-spin {
+    color: white;
+    background: black;
+    border: none;
+    /* берём размер шрифта такой же, как в колесе */
+    font-size: inherit;
+    /* добавляем отступы от текста внутри кнопки */
+    padding: 0.9rem 2rem 1rem;
+    /* скругляем углы */
+    border-radius: 0.5rem;
+    /* меняем внешний вид курсора над кнопкой на руку*/
+    cursor: pointer;
+}
+
+/* если кнопка нажата и неактивна */
+.btn-spin:disabled {
+    /* меняем внешний вид курсора */
+    cursor: progress;
+    /* делаем кнопку полупрозрачной */
+    opacity: 0.25;
+}
+
+/* анимация вращения */
+.is-spinning .spinner {
+    transition: transform 8s cubic-bezier(0.1, -0.01, 0, 1);
+}
+
+/* анимация движения язычка */
+/*  .is-spinning .ticker {
+      animation: tick 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+
+  !* эффект, когда колесо задевает язычок при вращении *!
+  @keyframes tick {
+      40% {
+          !* чуть поворачиваем язычок наверх в середине анимации *!
+          transform: rotate(-12deg);
+      }
+  }*/
+li.prize > span.text{
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    padding-right: 15px !important;
+}
+
+/* анимируем выпавший сектор */
+.prize.selected .text {
+    /* делаем текст белым */
+    color: white !important;
+    /* настраиваем длительность анимации */
+    animation: selected 800ms ease;
+}
+
+/* настраиваем анимацию текста на выпавшем секторе по кадрам */
+@keyframes selected {
+    /* что происходит на 25% от начала анимации */
+    25% {
+        /* увеличиваем текст в 1,25 раза */
+        transform: scale(1.25) rotate(180deg);
+        /* добавляем тексту тень */
+        text-shadow: 1vmin 1vmin 0 hsla(0 0% 0% / 0.1);
+    }
+    40% {
+        transform: scale(0.92) rotate(180deg);
+        text-shadow: 0 0 0 hsla(0 0% 0% / 0.2);
+    }
+    60% {
+        transform: scale(1.02) rotate(180deg);
+        text-shadow: 0.5vmin 0.5vmin 0 hsla(0 0% 0% / 0.1);
+    }
+    75% {
+        transform: scale(0.98) rotate(180deg);
+    }
+    85% {
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+#extremefortuna-container #extremefortuna-form * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    color: inherit;
+    line-height: normal;
+    vertical-align: baseline;
+    background: none;
+    pointer-events: all;
+    position: static;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form li.prize > span.text,
+#extremefortuna-container.t-fortuna_spring #extremefortuna-form li.prize > span.text{
+    color: white;
+    font-size: 24px;
+    text-shadow: 0 3px 3px rgba(9, 93, 135, 0.35);
+}
+#form_fort .error{
+    font-size: 12px !important;
+    color:red !important;
+}
+#extremefortuna-container #extremefortuna-form *:before,#extremefortuna-container #extremefortuna-form *:after {
+    content: '';
+    content: none;
+}
+#extremefortuna-container .extremefortuna-reset,#extremefortuna-container
+.extremefortuna-reset * {
+    line-height: inherit;
+    box-sizing: border-box;
+}
+
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle-backdrop {
+    position: absolute;
+}
+
+#extremefortuna-container #extremefortuna-form {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#extremefortuna-container #extremefortuna-form:before{
+    content:'';
+    width:814px;
+    height:772px;
+    background:#ffffff;
+    opacity:0.62;
+    border-radius:50%;
+    position:absolute;
+    z-index:-1;
+    top:50%;
+    left:-200px;
+    transform:translate(0,-50%);
+    filter: blur(80px);
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form:before,#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form:before{
+    display:none;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-close {
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    right: 40px;
+    width: 31px;
+    height: 31px;
+    font-size: 0;
+    color: transparent;
+    background-color:transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-close,
+#extremefortuna-container.t-fortuna_spring #extremefortuna-form .extremefortuna-close{
+    background: white;
+    width: 38px;
+    height: 38px;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-close:hover {
+    transform: rotate(45deg) scale(1.1);
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-close:before,
+#extremefortuna-container #extremefortuna-form .extremefortuna-close:after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #262931;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-close:before,
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-close:after,
+#extremefortuna-container.t-fortuna_spring #extremefortuna-form .extremefortuna-close:before,
+#extremefortuna-container.t-fortuna_spring #extremefortuna-form .extremefortuna-close:after{
+    top: 18px;
+    width: 60%;
+    left: 8px;
+}
+#extremefortuna-container.extremefortuna-mobile.t-fortuna_winter #extremefortuna-form .extremefortuna-close:before,
+#extremefortuna-container.extremefortuna-mobile.t-fortuna_winter #extremefortuna-form .extremefortuna-close:after,
+#extremefortuna-container.extremefortuna-mobile.t-fortuna_spring #extremefortuna-form .extremefortuna-close:before,
+#extremefortuna-container.extremefortuna-mobile.t-fortuna_spring #extremefortuna-form .extremefortuna-close:after{
+    top: 9px;
+    left: 4px;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-close:after {
+    transform: rotate(90deg);
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-close,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-close {
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .ff-mobile .extremefortuna-close,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .ff-mobile .extremefortuna-close {
+    top: 15px;
+    right: 15px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-close:before,
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-close:after,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-close:before,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-close:after {
+    height: 1px;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-main,
+#extremefortuna-container #extremefortuna-form .extremefortuna-thankyou {
+    width: calc(840px + 277.00px);
+    height: 500px;
+    position: relative;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle {
+    display: flex;
+    width: 520px;
+    height: 520px;
+    border:12px solid #ffffff;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background:#fff;
+    transition: transform 3s;
+}
+
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle .extremefortuna-sector {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle .extremefortuna-sector .extremefortuna-sector-text {
+    width: 50%;
+    height: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 30px;
+    transform-origin: 30px 15px;
+    text-align: right;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle .extremefortuna-sector .extremefortuna-sector-text span {
+    display: block;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle .extremefortuna-sector .extremefortuna-sector-text .extremefortuna-sector-text_big {
+    line-height: 30px;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle .extremefortuna-sector .extremefortuna-sector-text .extremefortuna-sector-text_big {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#extremefortuna-container #extremefortuna-form .extremefortuna-circle .extremefortuna-circle-texts {
+    position: static;
+    padding-left: 0;
+}
+
+#extremefortuna-container #extremefortuna-form .extremefortuna-arrow,
+#extremefortuna-container #extremefortuna-form .fortuna-gift-winter,
+#extremefortuna-container #extremefortuna-form .fortuna-gift-spring{
+    width:85px;
+    height:56px;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translate(-38px, -70%);
+    left: 50%;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-arrow,
+#extremefortuna-container.t-fortuna_spring #extremefortuna-form .extremefortuna-arrow{
+    left: 100%;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .fortuna-gift-winter {
+        
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-arrow svg {
+    width:100%;
+    height:100%;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-content {
+    width: calc(100% - 260.00px);
+    background: #FFDDE2;
+    background-image: url('image/fortuna_fon.png?04032022');
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 0;
+    box-shadow: 0 1px 20px 2px rgba(1, 2, 2, 0.1);
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: calc(92px + 10px) 92px calc(92px + 10px) calc(260.00px + 92px);
+    text-align: center;
+    min-height: 397px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-content {
+    background: transparent;
+    background-image: url('image/winter_fortuna.png');
+    background-repeat: no-repeat;
+    box-shadow: none;
+    padding: calc(92px + 70px) 92px calc(92px + 30px) calc(260.00px + 92px);
+}
+#extremefortuna-container.t-fortuna_spring #extremefortuna-form .extremefortuna-content {
+    background: transparent;
+    background-image: url('image/spring_fortuna.png');
+    background-repeat: no-repeat;
+    box-shadow: none;
+    padding: calc(92px + 70px) 92px calc(92px + 30px) calc(260.00px + 92px);
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-content.ff-mobile {
+    background-image: url('image/winter_fortuna_mobile.png');
+}
+#extremefortuna-container.t-fortuna_spring #extremefortuna-form .extremefortuna-content.ff-mobile {
+    background-image: url('image/spring_fortuna_mobile.png');
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-img {
+    width:219px;
+    height:auto;
+    margin-bottom:42px;
+    margin-top:-0.00px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-img,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-img {
+    display:none;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #473c6a;
+    margin: 0 0 15px;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-title {
+    color: white;
+    text-shadow: 0 3px 3px rgba(9, 93, 135, 0.35);
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-text {
+    font-size: 20.00px;
+    font-weight: 400;
+    line-height: 1.2;
+    color:#473c6a;
+    margin: 0 0 15px;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-text {
+    color: white;
+    text-shadow: 0 3px 3px rgba(9, 93, 135, 0.35);
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-inputs {
+    width: 100%;
+    max-width:325px;
+    margin:15px 0 0;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-inputs-wrapper > * {
+    margin: 0;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-inputs-wrapper > #extremefortuna-form-form > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-input {
+    width: 100%;
+    padding: 11px 15px;
+    border: 1px solid #EAEAEA;
+    border-radius: 1.00px;
+    outline: none;
+    color: #B5B5B5;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    background-color: #ffffff;
+    text-align:center;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-input::placeholder {
+    color: #B5B5B5;
+    opacity: .6;
+    transition: all .3s;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-input:focus::placeholder {
+    opacity: 0;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-input.extremefortuna-invalid {
+    border-color:#f00;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-hidden {
+    display:none;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-submit {
+    width: 100%;
+    z-index: 55;
+    padding:calc(11px + 2px) 15px;
+    border:none;
+    outline: none;
+    border-radius: 1.00px;
+    color: white;
+    font-size: 17.00px;
+    font-weight: 400;
+    line-height: 1;
+    height: 44px;
+    background-color: #7b66fe;
+    transition: all .3s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-submit:not(:disabled) {
+    cursor: pointer;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-submit:not(:disabled):hover {
+    background-color: #7b66fe;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-submit:disabled {
+    opacity: .8;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-buttons {
+    width: 100%;
+    display: flex;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-buttons-wrapper {
+    width: 100%;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-buttons .extremefortuna-submit {
+    width: 50%;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-buttons .extremefortuna-submit:not(:last-child) {
+    margin-right: 10px;
+}
+
+#extremefortuna-container #extremefortuna-form .extremefortuna-checkbox-block {
+    position: relative;
+    display: block;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: left;
+    color: #262931;
+    padding: 0 0 0 30px;
+    margin: 15px 0;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-checkbox-block{
+    color: white;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-checkbox-block a {
+    color: #7b66fe;
+    text-decoration: underline;
+}
+#extremefortuna-container.t-fortuna_winter #extremefortuna-form .extremefortuna-checkbox-block a {
+    color: #b6aff9;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-checkbox-block:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ffff;
+    box-sizing:border-box;
+}
+#extremefortuna-container #extremefortuna-form .ff-mobile .extremefortuna-checkbox-block:before{
+    background: white;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-checkbox-check {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    z-index: 2;
+    width: 17px;
+    height: 17px;
+    opacity: 0;
+    transition: all .3s;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-checkbox {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-checkbox:checked ~ .extremefortuna-checkbox-check {
+    opacity: 1;
+}
+#extremefortuna-container #extremefortuna-form .extremefortuna-ok {
+    height: auto;
+    width: 240px;
+    margin-bottom:16px;
+    margin-top:-61px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form {
+    overflow: hidden;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-main,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-main {
+    height:auto;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-circle-container,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-circle-container {
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    overflow: visible;
+}
+
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-circle,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-circle {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    width: 280px;
+    height: 280px;
+    border-width:8px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-circle .extremefortuna-sector .extremefortuna-sector-text,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-circle .extremefortuna-sector .extremefortuna-sector-text {
+    width: 50%;
+    height: 12px;
+    position: absolute;
+    top: calc(50% - 6px);
+    right: 15px;
+    transform-origin: 15px 6px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-circle .extremefortuna-sector .extremefortuna-sector-text .extremefortuna-sector-text_big,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-circle .extremefortuna-sector .extremefortuna-sector-text .extremefortuna-sector-text_big {
+    font-size: 11px;
+    line-height:12px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-main, #extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-thankyou,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-main, #extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-thankyou {
+    width: 320px;
+    height:auto;
+    min-height: 0;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-content,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-content {
+    width:100%;
+    min-height: 0;
+    position: static;
+    transform: none;
+    padding: 30px 10px 180px 10px;
+    display: block;
+    border-radius: 0;
+}
+#extremefortuna-container.extremefortuna-mobile.t-fortuna_winter  #extremefortuna-form .extremefortuna-content {
+    padding: 70px 10px 180px 20px;
+}
+#extremefortuna-container.extremefortuna-mobile.t-fortuna_winter  #extremefortuna-form .extremefortuna-content.ff-mobile {
+    padding: 10px 10px 160px 20px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-arrow,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-arrow {
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%) rotate(90deg);
+    width: 45px;
+    height: 30px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-title,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-title {
+    font-size: 17px;
+    margin: 0 0 15px;
+    text-align: left;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .ff-mobile .extremefortuna-title,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .ff-mobile .extremefortuna-title {
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-text,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-text {
+    font-size:12px;
+    text-align: left;
+}
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs.thank{
+    margin:0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 44px;
+}
+
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-inputs,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs{
+    margin:0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-inputs .extremefortuna-inputs-wrapper,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs .extremefortuna-inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-end;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-inputs-wrapper > *:not(:last-child),
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs-wrapper > *:not(:last-child) {
+    margin-bottom: 6px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-inputs .extremefortuna-input,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs .extremefortuna-input {
+    padding: 0 15px;
+    margin:0 0 6px;
+    width: 100%;
+    height: 40px;
+    font-size:12px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-inputs .extremefortuna-submit,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs .extremefortuna-submit {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 5px 15px;
+    font-size: 17px;
+    text-decoration: unset;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-inputs .extremefortuna-buttons,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs .extremefortuna-buttons {
+    display: block;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-inputs .extremefortuna-buttons .extremefortuna-submit,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs .extremefortuna-buttons .extremefortuna-submit {
+    width: 100%;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-inputs .extremefortuna-buttons .extremefortuna-submit:not(:last-child),
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-inputs .extremefortuna-buttons .extremefortuna-submit:not(:last-child) {
+    margin-bottom: 6px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-checkbox-block,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-checkbox-block {
+    width:100%;
+    margin: 15px auto 0;
+    font-size:9px;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-thankyou .extremefortuna-content,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-thankyou .extremefortuna-content {
+    padding: 30px 15px 180px 15px;
+    min-height: 320px;
+    position:static;
+    transform:none;
+    display: block;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-thankyou .extremefortuna-ok,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-thankyou .extremefortuna-ok {
+    display: none;
+}
+
+#extremefortuna-container.extremefortuna-tablet #extremefortuna-container.extremefortuna-success  #extremefortuna-form .extremefortuna-circl,
+#extremefortuna-container.extremefortuna-mobile #extremefortuna-container.extremefortuna-success  #extremefortuna-form .extremefortuna-circle{
+    top:calc(50% - 140px);
+}
+
+#extremefortuna-container .extremefortuna-thankyou {
+    display: none;
+}
+#extremefortuna-container.extremefortuna-success  #extremefortuna-form .extremefortuna-main {
+    display: none;
+}
+#extremefortuna-container.extremefortuna-success  #extremefortuna-form .extremefortuna-thankyou {
+    display: block;
+}
+#extremefortuna-container.extremefortuna-tablet  #extremefortuna-form .extremefortuna-circle-inner,
+#extremefortuna-container.extremefortuna-mobile  #extremefortuna-form .extremefortuna-circle-inner {
+    transform: rotate(-90deg);
+}
+#popup-fortuna-extremelook.popup-window{
+    background-color: transparent;
+}
+#popup-window-content-popup-fortuna-extremelook{
+    overflow: visible !important;
+    background-color: transparent;
+}
+form#extremefortuna-form-form label.error{
+    color: red !important;
+    font-size: 12px !important;
+    margin-bottom: 0 !important;
+}
+form#extremefortuna-form-form input.extremefortuna-valid.error{
+    border: 1px solid red !important;
+    margin-bottom: 0 !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+@media (max-width: 991px){
+    .spinner{
+        width: 320px;
+        height: 320px;
+    }
+    .extremefortuna-circle-container{
+        transform: translate(-50%, 53%) !important;
+    }
+    li.prize > span.text{
+        font-size: 12px !important;
+        padding-right: 10px !important;
+    }
+    #extremefortuna-container.extremefortuna-mobile #extremefortuna-form .extremefortuna-arrow{
+        top: -14px;
+        transform: translatex(-50%) rotate(-90deg);
+    }
+    #extremefortuna-container.extremefortuna-mobile #extremefortuna-form .extremefortuna-title,
+    #extremefortuna-container.extremefortuna-mobile #extremefortuna-form .extremefortuna-text{
+        text-align: center;
+    }
+    #extremefortuna-container.extremefortuna-mobile #extremefortuna-form .extremefortuna-text{
+
+    }
+}
