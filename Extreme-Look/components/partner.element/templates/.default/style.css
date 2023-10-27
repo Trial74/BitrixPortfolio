@@ -1,0 +1,146 @@
+.partner_box__partner__name{
+    font-family: 'Graphik LCG';
+    font-weight: bold;
+}
+.partner_box__partner{
+    background: #f1eeff;
+    border: 1px solid #9788ff;
+    width: 450px;
+    height: 150px;
+    padding: 20px 20px 30px 20px;
+    border-radius: 7px;
+    display: inline-table;
+    margin: 10px 5px 0 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 200;
+}
+.avatar-part{
+    float: left;
+    height: 107px;
+    width: 107px;
+    margin-bottom: 15px;
+    background: url(img/avatar.png) no-repeat center;
+    background-size: contain;
+    background-position: top;
+}
+.tel_part:before{
+    content: " ";
+    background: url(img/Phone.svg) no-repeat center;
+    position: inherit;
+    width: 20px;
+    height: 20px;
+    padding-right: 20px;
+}
+.marker-personal-show:before{
+    content: " ";
+    background: url(img/Pointer.svg) no-repeat center;
+    position: inherit;
+    width: 20px;
+    height: 20px;
+    padding-right: 20px;
+}
+.partner-points{
+    height: inherit;
+    transition: all 0.3s;
+}
+.map_points{
+    overflow: hidden;
+    height: inherit;
+}
+.map_points.active{
+    height: auto;
+}
+.uf_dop_info{
+    font-family: 'Graphik LCG';
+    font-weight: 400;
+    color: gray;
+    font-size: smaller;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: auto;
+}
+.coordinats{
+    padding-bottom: 15px;
+}
+.tel_part{
+    font-family: 'Graphik LCG';
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-table;
+}
+.box_marker{
+    font-family: 'Graphik LCG';
+    font-weight: 400;
+    font-size: 14px;
+    display: inline-table;
+}
+.partner_box__partner__name{
+    font-family: 'Graphik LCG';
+    font-weight: bold;
+}
+.see-all{
+    width: 100%;
+    height: 30px;
+    background: #767676;
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.text-see{
+    font-family: 'Graphik LCG';
+    font-weight: 500;
+    color: black;
+    height: 100%;
+    padding-top: 6px;
+    transition: all 0.3s;
+}
+.breadcrumb-part{
+    background-color: transparent;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    border-radius: 4px;
+}
+.breadcrumb-part > li + li:before{
+    content: '—';
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.breadcrumb-part > li {
+    display: inline-block;
+}
+.part_breadcrumb{
+    display: block;
+}
+.breadcrumb-item {
+    font-family: 'Graphik LCG';
+    font-weight: 500;
+}
+.text-see.active {
+    transform: rotate(180deg);
+    height: 30px;
+}
+.list-parts{
+    font-family: 'Graphik LCG';
+    font-weight: bold;
+    font-size: larger;
+}
+.list-parts span{
+    color: #9788ff;
+}
+@-moz-document url-prefix() {
+    .avatar-part{
+        padding: 10% 0 10% 0;
+        display: inherit;
+    }
+}
+
+@media (max-width: 991px){
+    .partner_box__partner{
+        width: 100%;
+    }
+}
