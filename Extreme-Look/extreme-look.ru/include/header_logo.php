@@ -1,0 +1,1 @@
+<a href="<?=SITE_DIR?>"><img src="https://extreme-look.ru/upload/medialibrary/f96/logo.png" /></a>
