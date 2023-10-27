@@ -1,0 +1,191 @@
+body{
+    font-family: "Graphik LCG";
+    background-color: #e8e1ff;
+}
+:root {
+    --margin: 0 auto 25px;
+}
+a, img{
+    width: inherit;
+    display: block;
+}
+a.tap-second-block,
+div.tap-third-block,
+a.tap-fifth-block,
+a.tap-sixth-block,
+div.tap-third-block > a.tap-third-first-button,
+div.tap-third-block > a.tap-third-second-button,
+div.tap-third-block > a.tap-third-third-button{
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+}
+
+div.tap-logo > img{
+    margin: 94px auto 75px;
+    max-width: 362px;
+}
+div.tap-first-block > img{
+    margin: var(--margin);
+    max-width: 831px;
+}
+a.tap-second-block{
+    margin: var(--margin);
+    max-width: 831px;
+    cursor: pointer;
+}
+div.tap-third-block{
+    max-width: 831px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 9px 9px 0px rgba(89, 20, 151, 0.05);
+    margin: var(--margin);
+}
+div.tap-third-block > div.tap-third-tittle,
+div.tap-forth-block > div.tap-forth-tittle,
+div.tap-eigth-block > div.tap-eigth-tittle{
+    font-size: 30px;
+    font-weight: 600;
+    width: max-content;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+div.tap-third-block > a.tap-third-first-button{
+    margin: var(--margin);
+    max-width: 700px;
+    cursor: pointer;
+}
+div.tap-third-block > a.tap-third-second-button{
+    margin: var(--margin);
+    max-width: 700px;
+    cursor: pointer;
+}
+div.tap-third-block > a.tap-third-third-button{
+    margin: var(--margin);
+    max-width: 700px;
+    cursor: pointer;
+}
+div.tap-forth-block{
+    margin: var(--margin);
+    max-width: 831px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 9px 9px 0px rgba(89, 20, 151, 0.05);
+}
+div.tap-forth-block > div.tap-forth-social-block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+    margin: var(--margin);
+}
+div.tap-forth-block > div.tap-forth-social-block > a.tap-forth-vk{
+    max-width: 153px;
+    cursor: pointer;
+}
+div.tap-forth-block > div.tap-forth-social-block > a.tap-forth-telegram{
+    max-width: 153px;
+    cursor: pointer;
+}
+div.tap-forth-block > div.tap-forth-social-block > a.tap-forth-youtube{
+    max-width: 153px;
+    cursor: pointer;
+}
+div.tap-forth-block > div.tap-forth-social-block > a.tap-forth-viber{
+    max-width: 153px;
+    cursor: pointer;
+}
+div.tap-forth-block > a.tap-forth-first-button{
+    margin: var(--margin);
+    max-width: 700px;
+    cursor: pointer;
+}
+div.tap-forth-block > a.tap-forth-second-button{
+    margin: var(--margin);
+    max-width: 700px;
+    cursor: pointer;
+}
+a.tap-fifth-block{
+    margin: var(--margin);
+    max-width: 861px;
+}
+a.tap-sixth-block{
+    margin: var(--margin);
+    max-width: 861px;
+}
+a.tap-seventh-block{
+    margin: var(--margin);
+    max-width: 861px;
+}
+div.tap-eigth-block{
+    margin: var(--margin);
+    max-width: 831px;
+    border-radius: 20px;
+    background-color: #f1edff;
+    box-shadow: 0 9px 9px 0 rgba(89, 20, 151, 0.05);
+}
+a.tap-eigth-item-1,
+a.tap-eigth-item-2,
+a.tap-eigth-item-3,
+a.tap-eigth-item-4{
+    height: 667px;
+    background-repeat: no-repeat;
+    margin: auto;
+    max-width: 420px;
+}
+.splide__arrow{
+    background-color: transparent !important;
+    width: 8rem;
+    height: 8rem;
+    top: 40%;
+}
+.splide__arrow--next{
+    background-image: url("/bitrix/templates/tap_page/images/eigth/arrow-right.png") !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.splide__arrow--prev{
+    background-image: url("/bitrix/templates/tap_page/images/eigth/arrow-left.png") !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+a.tap-nineth-block{
+    margin: var(--margin);
+    max-width: 832px;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .splide__arrow{
+        width: 5rem;
+        height: 5rem;
+        top: 45%;
+    }
+    div.tap-logo > img{
+        margin: 44px auto 35px;
+        max-width: 191px;
+    }
+    div.tap-third-block > div.tap-third-tittle,
+    div.tap-forth-block > div.tap-forth-tittle,
+    div.tap-eigth-block > div.tap-eigth-tittle{
+        font-size: 20px;
+        font-weight: 600;
+        width: max-content;
+        margin: 0 auto;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+    :root {
+        --margin: 0 auto 5px;
+    }
+}
+@media (max-width: 470px){
+    a.tap-eigth-item-1,
+    a.tap-eigth-item-2,
+    a.tap-eigth-item-3,
+    a.tap-eigth-item-4{
+        height: 550px;
+    }
+}
