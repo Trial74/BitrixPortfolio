@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow: /admin/
+Disallow: /bitrix/
+Disallow: /ajax/
+Disallow: /forms/
+Disallow: /test.php
+Disallow: *ADD_TO_COMPARE
+Disallow: *bx_bogus_href
+Disallow: *?q=
+Disallow: *?captcha
+Disallow: *index.php
+Disallow: *?action
+Disallow: *?clear_cache
+Disallow: *&clear_cache
+Clean-param: clear_cache
+Sitemap: http://mixon-lab.ru/sitemap.xml
