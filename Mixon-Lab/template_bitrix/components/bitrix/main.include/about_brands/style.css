@@ -1,0 +1,81 @@
+.mix-brands-first{
+    height: 680px;
+}
+.mix-brands-text-700,
+.mix-tittle-text-fourth,
+.mix-tittle-text-fifth{
+    font-weight: 700;
+}
+.mix-brands-text,
+.mix-brands-sblock-text{
+    font-weight: 800;
+}
+.block-third-brands{
+    border: 2px solid #bf8cfa;
+    border-radius: 10px;
+}
+.h-mix-brands{
+    height: 400px;
+}
+.mix-brands-f-bg{
+    background: url("/bitrix/templates/enext_mixon/images/about/brands/first_block.png");
+    background-position-y: -87px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+.mix-brands-th-bg{
+    background: url("/bitrix/templates/enext_mixon/images/about/brands/third_block.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+.mix-brands-block-part{
+    border-radius: 10px;
+    background-image: -moz-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    box-shadow: -11.388px 42.501px 35px 0 rgba(111, 109, 192, 0.13);
+}
+.mix-form-feedback-inputs {
+    border-radius: 10px;
+    background-image: -moz-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    top: 50px;
+    background: white;
+    box-shadow: -11.388px 42.501px 35px 0 rgb(111 109 192 / 13%);
+}
+.mix-form-feedback-inputs.mix-mix-border {
+    border: 2px solid #bf8cfa;
+}
+/***DESC 1440px***/
+@media (max-width: 1440px){
+
+}
+/***MOBILE***/
+@media (max-width: 991px){
+    .mix-brands-f-bg{
+        background-position-y: bottom;
+        background-position-x: 79%;
+        background-repeat: no-repeat;
+        background-size: 1320px;
+    }
+    .mix-brands-block-part{
+        border-radius: 10px;
+        background-image: none;
+        box-shadow: none;
+        background: #f7f8ff;
+    }
+    .h-mix-brands{
+        height: 625px;
+    }
+}
+@media (max-width: 640px){
+
+}
+@media (max-width: 480px){
+
+}
+@media (max-width: 400px){
+
+}

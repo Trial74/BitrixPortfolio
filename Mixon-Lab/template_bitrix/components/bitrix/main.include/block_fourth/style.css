@@ -1,0 +1,231 @@
+.mix-fourth-block-main{
+    height: 780px;
+}
+.mix-fourth-block-main > .mix-fourth-flex{
+    width: 100%;
+    height: 780px;
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info{
+    flex-direction: column;
+    width: 700px;
+    height: inherit;
+    margin: auto;
+    justify-content: center;
+
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle{
+    position: relative;
+    /*height: 150px;*/
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle > .mix-absolute-tittle{
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 60px;
+    width: 730px;
+    text-align: left;
+    /*position: absolute;*/
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-subtittle{
+    position: relative;
+    width: 730px;
+    /*height: 120px;*/
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-subtittle > .mix-absolute-subtittle{
+    font-size: 21px;
+    text-align: left;
+    /*position: absolute;*/
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block{
+    text-transform: uppercase;
+    background-image: -moz-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    box-shadow: -11.388px 42.501px 35px 0px rgba(111, 109, 192, 0.13);
+    border-radius: 40px;
+    font-size: 20px;
+    color: #cd87fa;
+    font-weight: bold;
+    width: 270px;
+    height: 76px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block > span{
+    margin-left: 42px;
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block:after{
+    content: "";
+    background: url(images/arrow-right.png) no-repeat;
+    background-size: cover;
+    width: 65px;
+    height: 65px;
+    margin-right: 5px;
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-banner-block{
+    height: inherit;
+    align-items: center;
+}
+.mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-banner-block > .mix-fourth-banner{
+    background: url("images/block-fourth-banner.png") no-repeat;
+    height: 595px;
+    width: 752px;
+}
+/***DESC 1440px***/
+@media (max-width: 1440px){
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle > .mix-absolute-tittle{
+        font-size: 50px;
+        line-height: 55px;
+        width: 730px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info{
+        width: 285px;
+    }
+}
+/***MOBILE***/
+@media (max-width: 991px){
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle > .mix-absolute-tittle{
+        font-size: 40px;
+        line-height: 45px;
+        position: unset;
+        width: unset;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle{
+        height: 120px;
+        padding-top: 20px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-subtittle{
+        height: 100px;
+        width: 100%;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-subtittle > .mix-absolute-subtittle{
+        position: unset;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info{
+        width: 480px;
+        height: unset;
+        margin: 0 auto;
+        position: relative;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex{
+        flex-direction: column;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-banner-block > .mix-fourth-banner{
+        height: 100%;
+        width: 100%;
+        background-size: 480px;
+        background-position: top;
+        margin: 0 30px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block{
+        position: absolute;
+        top: 640px;
+        left: 15px;
+    }
+}
+@media (max-width: 640px){
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle > .mix-absolute-tittle{
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info{
+        width: 442px;
+    }
+}
+@media (max-width: 450px){
+    .mix-fourth-block-main {
+        height: 670px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block{
+        top: 565px;
+        width: 225px;
+        height: 55px;
+        font-size: 16px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block:after{
+        width: 45px;
+        height: 45px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle > .mix-absolute-tittle {
+        font-size: 28px;
+        line-height: 29px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-subtittle > .mix-absolute-subtittle {
+        font-size: 16px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info {
+        width: 340px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-banner-block > .mix-fourth-banner{
+        background-size: 350px;
+    }
+}
+@media (max-width: 400px){
+    .mix-fourth-block-main,
+    .mix-fourth-block-main > .mix-fourth-flex {
+        height: 660px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info{
+        width: 350px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle{
+        height: 100px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle > .mix-absolute-tittle{
+        font-size: 29px;
+        line-height: 34px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-subtittle > .mix-absolute-subtittle{
+        font-size: 16px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block{
+        width: 250px;
+        height: 60px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block:after{
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block{
+        top: 530px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-banner-block > .mix-fourth-banner{
+        background-size: 330px;
+    }
+}
+@media (max-width: 380px){
+    .mix-fourth-block-main,
+    .mix-fourth-block-main > .mix-fourth-flex{
+        height: 600px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info{
+        width: 280px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-tittle > .mix-absolute-tittle{
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-text-subtittle > .mix-absolute-subtittle{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-banner-block > .mix-fourth-banner{
+        background-size: 280px;
+        margin: 0 15px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block{
+        top: 480px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block{
+        height: 50px;
+        width: 225px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block > span{
+        margin-left: 30px;
+    }
+    .mix-fourth-block-main > .mix-fourth-flex > .mix-fourth-info > .mix-fourth-button-block:after{
+        width: 42px;
+        height: 42px;
+    }
+}

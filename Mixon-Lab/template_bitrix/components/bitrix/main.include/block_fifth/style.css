@@ -1,0 +1,86 @@
+.mix-fifth-block-main{
+    background: #fafbfd;
+}
+.mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info{
+    height: 200px;
+    align-items: center;
+}
+.mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info > .mix-fifth-text-tittle{
+    height: max-content;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 65px;
+}
+.slide-info > .slide-tittle{
+    font-weight: bold;
+    font-size: 23px;
+}
+.slide-info > .slide-subtittle{
+    font-size: 19px;
+    line-height: 25px;
+    margin-top: 15px;
+}
+.splide__slide > .slide-img{
+    text-align: center;
+}
+/***DESC 1440px***/
+@media (max-width: 1440px){
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info > .mix-fifth-text-tittle{
+        font-size: 50px;
+        line-height: 55px;
+    }
+}
+/***MOBILE***/
+@media (max-width: 991px){
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info > .mix-fifth-text-tittle{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .splide__slide > .slide-info{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info{
+        margin-left: 40px;
+    }
+}
+@media (max-width: 640px){
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info > .mix-fifth-text-tittle{
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+@media (max-width: 450px){
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info {
+        height: 100px;
+    }
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info > .mix-fifth-text-tittle {
+        font-size: 28px;
+        line-height: 29px;
+    }
+}
+@media (max-width: 400px){
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info > .mix-fifth-text-tittle{
+        font-size: 29px;
+        line-height: 34px;
+    }
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info {
+        height: 100px;
+    }
+}
+@media (max-width: 380px){
+    .mix-fifth-block-main > .mix-fifth-flex > .mix-fifth-info > .mix-fifth-text-tittle{
+        font-size: 23px;
+        line-height: 26px;
+    }
+    .slide-info > .slide-tittle{
+        font-size: 19px;
+    }
+    .slide-info > .slide-subtittle{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #mix-slide-first-list.splide__list > li{
+        height: 500px !important;
+    }
+}

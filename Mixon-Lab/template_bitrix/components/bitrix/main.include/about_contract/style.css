@@ -1,0 +1,368 @@
+.mix-about-container-text{
+    font-weight: 800;
+}
+.mix-form-feedback-inputs-tittle{
+    font-weight: 700;
+}
+.mix-about-first{
+    height: 684px;
+    position: relative;
+}
+.first-fon{
+    content: '';
+    position: absolute;
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/first_block.jpg);
+    background-position-x: 104%;
+    background-repeat: no-repeat;
+    background-size: auto 124%;
+    height: inherit;
+    width: 1300px;
+    top: 0;
+    right: -309px;
+    z-index: 10;
+}
+.first-tittle{
+    position: relative;
+    z-index: 20;
+}
+.mix-about-sblock-text-first{
+    font-weight: 800;
+}
+.mix-about-sblock-text-second{
+    line-height: 28px;
+}
+.mix-about-sblock-text-third{
+    line-height: 19px;
+}
+.mix-about-third-tittle-img{
+    font-weight: 800;
+}
+.mix-fourth-button-block {
+    text-transform: uppercase;
+    background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(238, 241, 249) 100%, rgb(238, 241, 249) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(238, 241, 249) 100%, rgb(238, 241, 249) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(238, 241, 249) 100%, rgb(238, 241, 249) 100%);
+    box-shadow: -11.388px 42.501px 35px 0px rgb(111 109 192 / 13%);
+    border-radius: 40px;
+    font-size: 20px;
+    color: #cd87fa;
+    font-weight: bold;
+    width: 270px;
+    height: 76px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.mix-fourth-button-block > span {
+    margin-left: 42px;
+}
+.mix-fourth-button-block:after {
+    content: "";
+    background: url(/bitrix/templates/enext_mixon/components/bitrix/main.include/block_fourth/images/arrow-right.png) no-repeat;
+    background-size: cover;
+    width: 65px;
+    height: 65px;
+    margin-right: 5px;
+}
+.second-1,
+.second-2,
+.second-3{
+    background-size: cover;
+    width: 227px;
+    height: 258px;
+}
+.second-1{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/second_1.png);
+}
+.second-2{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/second_2.png);
+}
+.second-3{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/second_3.png);
+}
+.fifth-1,
+.fifth-2,
+.fifth-3,
+.fifth-4,
+.fifth-5{
+    height: 413px;
+}
+.fifth-1{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/fifth_1.png);
+}
+.fifth-2{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/fifth_2.png);
+    height: 440px;
+}
+.fifth-3{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/fifth_3.png);
+}
+.fifth-4{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/fifth_4.png);
+    height: 440px;
+}
+.fifth-5{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/fifth_5.png);
+}
+.fifth-1,
+.fifth-2,
+.fifth-3,
+.fifth-4,
+.fifth-5{
+    width: 390px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.sixth-1{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/sixth_1.png);
+}
+.sixth-2{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/sixth_2.png);
+}
+.sixth-3{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/sixth_3.png);
+}
+.sixth-4{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/sixth_4.png);
+}
+.sixth-5{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/sixth_5.png);
+}
+.sixth-6{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/sixth_6.png);
+}
+.sixth-7{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/sixth_7.png);
+}
+.sixth-1,
+.sixth-2,
+.sixth-3,
+.sixth-4,
+.sixth-5,
+.sixth-6,
+.sixth-7{
+    height: 136px;
+    width: 138px;
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+.second-label{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    width: 75%;
+}
+.third-first{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/third_1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 379px;
+    height: 365px;
+    margin-top: 40px;
+}
+.third-item{
+    margin-top: 55px;
+}
+.third-item>div:first-child{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/t_el.png?11072023);
+    background-repeat: no-repeat;
+    min-width: 74px;
+    height: 74px;
+    font-size: 39px;
+    color: #a894fa;
+    box-shadow: -11.388px 42.501px 35px 0 rgba(111, 109, 192, 0.13);
+    border-radius: 50%;
+}
+.third-item>div:last-child{
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 600;
+    width: 330px;
+    margin-left: 35px;
+}
+.third-item>div:first-child>div{
+    left: 35%;
+    top: 13%;
+}
+
+.third-block-list{
+    height: 911px;
+}
+.mix-about-fourth{
+    background: url("/bitrix/templates/enext_mixon/images/about/contract/background_fourth.jpg");
+    background-repeat: repeat-x;
+    height: 675px;
+
+}
+.mix-about-fourth .mix-size-tittle-21{
+    color: white !important;
+    width: 600px;
+}
+.mix-about-fourth .mix-size-tittle-21:last-child{
+    font-weight: bold;
+}
+.mix-about-fourth-bg{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/fourth_block.png);
+    background-position-x: 111%;
+    background-position-y: 35px;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+}
+.fifth-item{
+    border-radius: 10px;
+    background-image: -moz-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgb(238,241,249) 100%, rgb(238,241,249) 100%);
+}
+
+.fifth-label{
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: bold;
+}
+.fifth-sublabel{
+    font-size: 21px;
+    line-height: 22px;
+    margin-top: 15px;
+}
+.sixth-label{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-top: 37px;
+}
+.sixth-sublabel{
+    font-size: 18px;
+    color: white;
+}
+.mix-about-sixth{
+    background: url("/bitrix/templates/enext_mixon/images/about/contract/background_sixth.jpg");
+    background-repeat: repeat-x;
+    height: 1381px;
+    margin-bottom: 97px;
+}
+.fifth-tittle{
+    margin-top: 26px;
+    margin-bottom: 41px;
+}
+.sixth-logo{
+    background: url(/bitrix/templates/enext_mixon/images/about/contract/sixth_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-width: 315px;
+    height: auto;
+}
+.sixth-tittle{
+    color: white;
+}
+.sixth-f-label{
+    font-size: 24px;
+    font-weight: 600;
+}
+.first-sixth-label{
+
+}
+.second-sixth-label{
+    margin-top: 21px;
+}
+.third-sixth-label{
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.sixth-footer-block{
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 15px 51px 76px;
+    gap: 89px;
+    margin-top: 69px;
+}
+.w-33{
+    width: 33.33333%;
+}
+/***DESC 1440px***/
+@media (max-width: 1440px){
+
+}
+/***MOBILE***/
+@media (max-width: 991px){
+    .w-33{
+        width: 100%;
+    }
+    .first-fon{
+        left: -280px;
+        opacity: 0.4;
+    }
+    .fifth-label{
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: bold;
+    }
+    .fifth-sublabel{
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 15px;
+    }
+    .mix-about-f-bg{
+        background-size: 668px;
+        background-position: left;
+    }
+    .mix-second{
+        width: 100%;
+    }
+
+    .third-item>div:last-child {
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        margin-left: 24px;
+    }
+    .third-item>div:first-child{
+        min-width: 50px;
+        height: 50px;
+        background-size: contain;
+    }
+    .third-first{
+        width: 299px;
+        height: 285px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mix-about-sixth{
+        background: unset;
+        background-color: #a894fa;
+        height: auto;
+    }
+    .second-label{
+        width: 100%;
+        font-size: 18px;
+        line-height: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .third-block-list{
+        height: auto;
+    }
+    .mix-about-fourth-bg{
+        background: unset;
+    }
+    .mix-about-fourth .mix-size-tittle-21{
+        width: 100%;
+    }
+    .sixth-logo{
+        height: 85px;
+    }
+    .sixth-footer-block{
+        padding: 50px 15px 51px;
+    }
+}
+@media (max-width: 640px){
+
+}
+@media (max-width: 480px){
+
+}
+@media (max-width: 400px){
+
+}

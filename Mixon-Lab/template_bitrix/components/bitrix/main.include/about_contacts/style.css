@@ -1,0 +1,64 @@
+.mix-contacts-tittle{
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 800;
+    padding-top: 134px;
+    padding-bottom: 92px;
+    margin-left: -6px;
+}
+.mix-contacts-info{
+    font-size: 19px;
+}
+.mix-contacts-info-link{
+    font-size: 21px;
+    font-weight: 600;
+}
+.container-fluid{
+    background: #f7f8ff;
+}
+.mix-contacts-icon.mix-mail-icon,
+.mix-contacts-icon.mix-phone-icon,
+.mix-contacts-icon.mix-soc-icon{
+    background-repeat: no-repeat;
+    display: block;
+    height: 80px;
+}
+.mix-contacts-icon.mix-mail-icon{
+    background-image: url("/bitrix/templates/enext_mixon/images/contacts/c-mail.png");
+}
+.mix-contacts-icon.mix-phone-icon{
+    background-image: url("/bitrix/templates/enext_mixon/images/contacts/c-phone.png");
+}
+.mix-contacts-icon.mix-soc-icon{
+    background-image: url("/bitrix/templates/enext_mixon/images/contacts/c-soc.png");
+}
+.mix-info-contacts{
+    margin-left: -16px;
+    line-height: 23px;
+}
+
+/***DESC 1440px***/
+@media (max-width: 1440px){
+
+}
+/***MOBILE***/
+@media (max-width: 991px){
+    .mix-contacts-tittle{
+        font-size: 50px;
+    }
+    .mix-contacts-info{
+        font-size: 16px;
+    }
+    .mix-contacts-info-link{
+        font-size: 18px;
+    }
+}
+@media (max-width: 640px){
+
+}
+@media (max-width: 480px){
+
+}
+@media (max-width: 400px){
+
+}

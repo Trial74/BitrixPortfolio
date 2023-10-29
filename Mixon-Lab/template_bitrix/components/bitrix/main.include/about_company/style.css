@@ -1,0 +1,78 @@
+.mix-about-container-text{
+    font-weight: 800;
+}
+.mix-form-feedback-inputs-tittle{
+    font-weight: 700;
+}
+.mix-about-first{
+    height: 670px;
+}
+.mix-about-f-bg{
+    background: url("/bitrix/templates/enext_mixon/images/about/first_block.png");
+    background-position-y: -87px;
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+.mix-about-sblock-text-first{
+    font-weight: 800;
+}
+.mix-about-sblock-text-second{
+    line-height: 28px;
+}
+.mix-about-sblock-text-third{
+    line-height: 19px;
+}
+.mix-about-third-tittle-img{
+    font-weight: 800;
+}
+.mix-fourth-button-block {
+    text-transform: uppercase;
+    background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(238, 241, 249) 100%, rgb(238, 241, 249) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(238, 241, 249) 100%, rgb(238, 241, 249) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(238, 241, 249) 100%, rgb(238, 241, 249) 100%);
+    box-shadow: -11.388px 42.501px 35px 0px rgb(111 109 192 / 13%);
+    border-radius: 40px;
+    font-size: 20px;
+    color: #cd87fa;
+    font-weight: bold;
+    width: 270px;
+    height: 76px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.mix-fourth-button-block > span {
+    margin-left: 42px;
+}
+.mix-fourth-button-block:after {
+    content: "";
+    background: url(/bitrix/templates/enext_mixon/components/bitrix/main.include/block_fourth/images/arrow-right.png) no-repeat;
+    background-size: cover;
+    width: 65px;
+    height: 65px;
+    margin-right: 5px;
+}
+/***DESC 1440px***/
+@media (max-width: 1440px){
+
+}
+/***MOBILE***/
+@media (max-width: 991px){
+    .mix-about-f-bg{
+        background-size: 668px;
+        background-position: left;
+    }
+    .mix-about-f-bg{
+        background: url("/bitrix/templates/enext_mixon/images/about/first_block_mobile.png");
+        background-position-y: -60px;
+    }
+}
+@media (max-width: 640px){
+
+}
+@media (max-width: 480px){
+
+}
+@media (max-width: 400px){
+
+}

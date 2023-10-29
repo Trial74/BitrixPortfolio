@@ -1,0 +1,435 @@
+.form-private-design,
+input[name=radio_STYLE],
+input[name=radio_LOGO],
+input[name=radio_PRICE_GROUP_UPAK],
+input[name=radio_PRICE_GROUP_ETIC]{
+    display: none;
+}
+.form-private-design.active{
+    display: block;
+}
+label.form-check-label_21{
+    background: #f7f8ff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+}
+label.form-check-label_21.active{
+    background-image: -moz-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    background-image: -webkit-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    background-image: -ms-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    box-shadow: 0px 3px 10px 0px rgba(149, 154, 250, 0.54);
+    color: white;
+}
+.mix-pr-group-check-23{
+    height: 600px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+}
+.mix-pr-group-check-23 > .form-check-inline{
+    width: 33.3333%;
+    margin: 0;
+}
+.mix-pr-group-check-23 > .form-check > label{
+    height: 280px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-check-label_23 > .form-check-label_23_check,
+.form-check-label_12 > .form-check-label_12_check{
+    background-size: contain;
+    background: url("/bitrix/templates/enext_mixon/images/private_design/uncheck_23.png");
+    width: 39px;
+    height: 39px;
+}
+.form-check-label_12{
+    font-size: 20px;
+    margin-left: 15px;
+    align-items: center;
+}
+.form-check-label_12 > .form-check-label_12_tittle{
+    margin-left: 15px;
+}
+.form-check-label_23 > .form-check-label_23_check.active,
+.form-check-label_12 > .form-check-label_12_check.active{
+    background: url("/bitrix/templates/enext_mixon/images/private_design/check_23.png");
+}
+.mix-pr-group-check-23 > .form-check > label > div.form-check-label_23_tittle,
+.mix-pr-group-check-23 > .form-check > label > img{
+    font-size: 19px;
+    max-width: 170px;
+    text-align: center;
+}
+.mix-pr-priorit{
+    font-size: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.mix-pr-priorit > li{
+    width: 240px;
+}
+.mix-pr-priorit > li::marker{
+    color: #bf8cfa;
+    font-size: 30px;
+}
+.mix-form-succ-subtittle-block{
+    font-size: 21px;
+    color: #62677b;
+    text-align: center;
+}
+.form-check-inline{
+    padding-left: 0;
+}
+.mix-container-form-pd,
+.container-banner{
+    background: #e6ecfa;
+}
+.mix-pr-block-info{
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.mix-pr-block-logo{
+    text-align: center;
+    z-index: 1;
+}
+.mix-pr-block-tittle{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 800;
+    width: 720px;
+    line-height: 40px;
+    z-index: 1;
+}
+.mix-pr-block-subtittle{
+    width: max-content;
+    color: #97a6c9;
+    font-size: 20px;
+    z-index: 1;
+}
+.container-banner{
+    height: 400px;
+    position: relative;
+}
+.container-banner:before{
+    content: '';
+    background-size: contain;
+    background: url("/bitrix/templates/enext_mixon/images/private_design/private_design_top_first.png");
+    position: absolute;
+    width: 311px;
+    height: 302px;
+    top: 0;
+    left: -130px;
+}
+.container-banner:after{
+    content: '';
+    background-size: contain;
+    background: url("/bitrix/templates/enext_mixon/images/private_design/private_design_top_second.png");
+    position: absolute;
+    width: 393px;
+    height: 407px;
+    right: -160px;
+    bottom: -70px;
+}
+.mix-pr-top-menu{
+    align-items: center;
+    height: 77px;
+    width: 940px;
+    background: white;
+    border-radius: 38px;
+    padding: 0 6px;
+}
+.mix-pr-top-menu > .mix-pr-top-menu-item{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    width: 33.3333%;
+}
+.mix-pr-top-menu > .mix-pr-top-menu-item.active{
+    border-radius: 32px;
+    height: 65px;
+    color: white;
+    background-image: -moz-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    background-image: -webkit-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    background-image: -ms-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    box-shadow: 0px 3px 10px 0px rgba(149, 154, 250, 0.54);
+}
+.mix-pr-main-block-exercise{
+    padding: 15px 13px;
+    margin-top: 70px;
+    height: 360px;
+    width: 940px;
+    border-radius: 10px;
+    background-image: -moz-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    background-image: -webkit-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    background-image: -ms-linear-gradient( 100deg, rgb(195,139,250) 0%, rgb(149,154,250) 100%);
+    box-shadow: 0px 3px 10px 0px rgba(149, 154, 250, 0.54);
+}
+.mix-pr-exercise-info,
+.mix-pr-exercise-tittle{
+    color: white;
+    font-weight: 700;
+}
+.mix-pr-exercise-info{
+    margin: 40px 20px 0;
+}
+.mix-pr-exercise-tittle{
+    font-size: 40px;
+    line-height: 40px;
+    padding: 20px 20px;
+    position: relative;
+}
+.mix-pr-exercise-tittle:after{
+    content: '';
+    background-size: contain;
+    background: url("/bitrix/templates/enext_mixon/images/private_design/arrow.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    right: 20px;
+    top: 28px;
+}
+.mix-pr-first,
+.mix-pr-second,
+.mix-pr-third{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 33.3333%;
+}
+.mix-pr-first > .mix-pr-first-tittle,
+.mix-pr-second > .mix-pr-second-tittle,
+.mix-pr-third > .mix-pr-third-tittle{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 170px;
+}
+.mix-pr-first > .mix-pr-first-subtittle{
+    font-size: 50px;
+    line-height: 50px;
+}
+.mix-pr-second > .mix-pr-second-subtittle,
+.mix-pr-third > .mix-pr-third-subtittle{
+    font-size: 20px;
+    line-height: 22px;
+    width: 250px;
+}
+.mix-pr-main-block-exercise > hr{
+    color: white;
+    margin: 1rem 1.3rem;
+}
+.mix-pr-main-block-obsh-form{
+    width: 940px;
+    background: white;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 30px;
+    box-shadow: -11.388px 42.501px 35px 0px rgba(111, 109, 192, 0.13);
+}
+.mix-pr-obsh-tittle{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.mix-pr-main-block-obsh-form > .mb-3 > .form-label{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+.mix-pr-main-block-obsh-form > .mb-3 > .form-label > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f8ff;
+    border-radius: 25px;
+    min-width: 50px;
+    height: 50px;
+    color: #97a6c9;
+}
+.mix-pr-main-block-obsh-form > .mb-3 > .form-label > div{
+    padding-left: 10px;
+}
+.mix-pr-main-block-obsh-form .form-control{
+    background: #f7f8ff;
+    border: transparent;
+}
+.mix-pr-main-block-obsh-form .form-control.is-invalid{
+    border: 1px solid #dc3545;
+}
+.mix-pr-main-block-obsh-form .form-control:focus{
+    border: 1px solid #bf8cfa;
+    box-shadow: unset;
+}
+.mix-pr-footer{
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.mix-pr-footer > .mix-pr-footer-left-block{
+    width: 350px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #97a6c9;
+}
+
+.mix-pr-submit{
+    width: 360px;
+    height: 60px;
+    border-radius: 40px;
+    justify-content: space-between;
+    align-items: center;
+    background-image: -moz-linear-gradient( 90deg, rgb(205,135,250) 0%, rgb(135,159,250) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(205,135,250) 0%, rgb(135,159,250) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(205,135,250) 0%, rgb(135,159,250) 100%);
+    color: white;
+    font-size: 19px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.mix-pr-submit > span{
+    margin-left: 30px;
+}
+.mix-pr-submit:after{
+     content: "";
+     background: url(/bitrix/templates/enext_mixon/components/bitrix/main.include/block_second/images/arrow-right.png) no-repeat;
+     background-size: cover;
+     width: 50px;
+     height: 50px;
+     margin-right: 5px;
+ }
+.mix-pr-validate{
+    font-size: 14px;
+    font-weight: 700;
+    color: red;
+}
+/***MOBILE***/
+@media (max-width: 991px){
+
+}
+@media (max-width: 768px){
+    .container-banner{
+        height: 280px;
+    }
+    .mix-pr-block-tittle{
+        font-size: 25px;
+        width: 100%;
+        line-height: 28px;
+    }
+    .mix-pr-main-block-exercise,
+    .mix-pr-main-block-obsh-form,
+    .mix-pr-top-menu{
+        width: 100%;
+    }
+    .mix-pr-group-check-23 > .form-check-inline{
+        width: 50%;
+    }
+    .mix-pr-group-check-23{
+        height: 800px;
+    }
+    .mix-pr-group-check-23 > .form-check > label > img{
+        max-width: 120px;
+    }
+    .mix-pr-group-check-23 > .form-check > label{
+        height: 240px;
+    }
+    .mix-pr-block-subtittle,
+    .mix-pr-group-check-23 > .form-check > label > div.form-check-label_23_tittle,
+    .mix-pr-priorit,
+    .mix-pr-main-block-obsh-form > .mb-3 > .form-label,
+    .form-check-label_12,
+    .mix-pr-top-menu > .mix-pr-top-menu-item
+    {
+        font-size: 14px;
+    }
+    label.form-check-label_21{
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+    .mix-pr-exercise-tittle{
+        font-size: 19px;
+        line-height: 25px;
+    }
+    .mix-pr-exercise-tittle:after{
+        background-size: 39px;
+        width: 40px;
+        height: 40px;
+    }
+    .container-banner:before{
+        background-size: 211px;
+        width: 211px;
+        height: 202px;
+        left: -70px;
+    }
+    .container-banner:after{
+        background-size: 293px;
+        width: 190px;
+        height: 307px;
+        right: 0;
+        bottom: 0;
+    }
+    .mix-pr-obsh-tittle{
+        font-size: 25px;
+    }
+    .mix-pr-exercise-info{
+        margin: 40px 0 0;
+    }
+    .mix-pr-first > .mix-pr-first-tittle,
+    .mix-pr-second > .mix-pr-second-tittle,
+    .mix-pr-third > .mix-pr-third-tittle{
+        font-size: 14px;
+        width: 100%;
+    }
+    .mix-pr-first > .mix-pr-first-subtittle{
+        font-size: 25px;
+        line-height: 27px;
+    }
+    .mix-pr-second > .mix-pr-second-subtittle,
+    .mix-pr-third > .mix-pr-third-subtittle{
+        font-size: 14px;
+        line-height: 16px;
+        width: 100%;
+    }
+    .mix-pr-main-block-exercise{
+        margin-top: 40px;
+    }
+    .mix-pr-footer{
+        flex-direction: column;
+    }
+    .mix-pr-submit{
+        width: 100%;
+        height: 45px;
+        border-radius: 22px;
+    }
+    .mix-pr-submit:after{
+        width: 38px;
+        height: 38px;
+        margin-right: 4px;
+    }
+    .mix-pr-footer{
+        margin-top: 35px;
+    }
+    .mix-pr-footer-right-block{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 480px){
+
+}
+@media (max-width: 350px){
+    .mix-pr-main-block-obsh-form{
+        padding: 15px;
+    }
+    .mix-pr-submit{
+        font-size: 14px;
+    }
+}
